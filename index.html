@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reshappr | Done-For-You Marketing for Kitchen &amp; Bath Remodelers</title>
+<meta name="description" content="Reshappr runs paid ads and automated follow-up for kitchen and bath remodelers so your calendar fills with real estimates, not tire-kickers. Leads go only to you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #000000;
+    --bg-card: #0c0c0d;
+    --bg-card-2: #111113;
+    --line: #1d1d20;
+    --line-soft: #161618;
+    --text: #ffffff;
+    --muted: #9a9aa2;
+    --muted-2: #6b6b73;
+    --accent: #ff4533;
+    --accent-soft: #ff4533;
+    --demo: #4d8dff;
+    --radius: 18px;
+    --radius-pill: 100px;
+    --serif: "Instrument Serif", Georgia, serif;
+    --sans: "Satoshi", system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  ::selection { background: var(--accent); color: #fff; }
+
+  .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* emphasis serif */
+  .em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+
+  /* ---------- NAV ---------- */
+  .nav-spacer { height: 110px; }
+  .nav {
+    position: fixed; top: 18px; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: center; pointer-events: none;
+  }
+  .nav-inner {
+    pointer-events: auto;
+    display: flex; align-items: center; gap: 28px;
+    background: rgba(12,12,13,0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    padding: 9px 9px 9px 22px;
+    box-shadow: 0 10px 40px -18px rgba(0,0,0,0.8);
+  }
+  .brand { font-weight: 900; letter-spacing: 0.08em; font-size: 17px; display: flex; align-items: center; gap: 8px; }
+  .brand .spark { color: var(--accent); }
+  .nav-links { display: flex; gap: 22px; font-size: 14px; color: var(--muted); }
+  .nav-links a:hover { color: #fff; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--accent); color: #fff; font-weight: 600; font-size: 14px;
+    padding: 11px 20px; border-radius: var(--radius-pill); border: none; cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+    box-shadow: 0 8px 26px -10px rgba(255,69,51,0.7);
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 32px -8px rgba(255,69,51,0.85); }
+  .btn-lg { padding: 15px 28px; font-size: 15px; }
+  .btn-ghost { background: transparent; border: 1px solid var(--line); box-shadow: none; color: #fff; }
+  .btn-ghost:hover { border-color: #333; background: rgba(255,255,255,0.03); }
+  .nav-toggle { display: none; }
+
+  /* ---------- SECTION SHELL ---------- */
+  section { position: relative; padding: 96px 0; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--bg-card); border: 1px solid var(--line);
+    color: #fff; font-size: 13px; font-weight: 500;
+    padding: 7px 14px 7px 11px; border-radius: var(--radius-pill); margin: 0 auto 22px;
+  }
+  .badge .dot { width: 16px; height: 16px; border-radius: 5px; background: var(--accent); display: inline-flex; align-items:center; justify-content:center; }
+  .badge .dot svg { width: 10px; height: 10px; }
+  .center { text-align: center; }
+  h1, h2, h3 { font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; }
+  .h-xl { font-size: clamp(40px, 6.6vw, 76px); }
+  .h-lg { font-size: clamp(32px, 4.6vw, 54px); }
+  .h-md { font-size: clamp(24px, 3vw, 34px); }
+  .lead { color: var(--muted); font-size: clamp(16px, 1.6vw, 19px); max-width: 600px; margin: 22px auto 0; }
+  .section-head { max-width: 720px; margin: 0 auto 60px; }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: 40px 0 90px; text-align: center; }
+  .hero-glow {
+    position: absolute; left: 50%; top: 240px; transform: translateX(-50%);
+    width: 900px; height: 460px; pointer-events: none; z-index: 0;
+    background: radial-gradient(ellipse at center, rgba(255,69,51,0.28) 0%, rgba(255,69,51,0) 62%);
+    filter: blur(20px);
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero h1 { margin: 0 auto; max-width: 880px; }
+  .hero .lead { max-width: 560px; }
+  .hero-cta { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* hero mock */
+  .mock-wrap { margin: 64px auto 0; max-width: 760px; position: relative; }
+  .mock-glow {
+    position: absolute; inset: -2px; border-radius: 22px; z-index: 0;
+    background: linear-gradient(180deg, rgba(255,69,51,0.9), rgba(255,69,51,0.15));
+    filter: blur(22px); opacity: 0.65;
+  }
+  .mock {
+    position: relative; z-index: 1; background: #0b0b0c; border: 1px solid #242427;
+    border-radius: 16px; overflow: hidden; text-align: left;
+    box-shadow: 0 40px 90px -40px rgba(0,0,0,0.9);
+  }
+  .mock-bar { display: flex; align-items: center; gap: 7px; padding: 13px 16px; border-bottom: 1px solid var(--line); background: #0e0e10; }
+  .mock-bar .d { width: 11px; height: 11px; border-radius: 50%; background: #2a2a2e; }
+  .mock-bar .title { margin-left: 10px; font-size: 12.5px; color: var(--muted-2); }
+  .mock-body { padding: 16px; display: grid; gap: 10px; }
+  .lead-row { display: flex; align-items: center; gap: 13px; background: #121214; border: 1px solid var(--line-soft); border-radius: 12px; padding: 12px 14px; }
+  .ava { width: 38px; height: 38px; border-radius: 10px; flex: none; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: #fff; }
+  .lead-row .meta { flex: 1; min-width: 0; }
+  .lead-row .nm { font-size: 14.5px; font-weight: 600; }
+  .lead-row .pj { font-size: 12.5px; color: var(--muted-2); }
+  .tag { font-size: 11.5px; font-weight: 600; padding: 5px 10px; border-radius: 100px; white-space: nowrap; }
+  .tag.booked { background: rgba(54,211,122,0.13); color: #5fe39a; }
+  .tag.new { background: rgba(255,69,51,0.14); color: #ff7a6d; }
+  .tag.replied { background: rgba(96,165,250,0.14); color: #7fb4ff; }
+  .toast {
+    position: absolute; right: 16px; bottom: -18px; z-index: 3;
+    display: flex; align-items: center; gap: 10px;
+    background: #101012; border: 1px solid #2a2a2e; border-radius: 12px; padding: 11px 15px;
+    box-shadow: 0 20px 40px -18px rgba(0,0,0,0.9);
+  }
+  .toast .ic { width: 26px; height: 26px; border-radius: 7px; background: rgba(54,211,122,0.15); color: #5fe39a; display: flex; align-items: center; justify-content: center; }
+  .toast .tt { font-size: 12.5px; font-weight: 600; }
+  .toast .ts { font-size: 11px; color: var(--muted-2); }
+
+  /* ---------- PLATFORMS ---------- */
+  .platforms { padding: 30px 0 40px; text-align: center; }
+  .platforms p { color: var(--muted-2); font-size: 14px; margin-bottom: 26px; }
+  .logo-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .logo-chip {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 14px 22px; color: #cfcfd4; font-weight: 600; font-size: 15px;
+  }
+  .logo-chip svg { width: 20px; height: 20px; }
+
+  /* ---------- PROCESS ---------- */
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px 56px; max-width: 860px; margin: 0 auto; }
+  .step { text-align: center; }
+  .step .icon {
+    width: 58px; height: 58px; margin: 0 auto 18px; border-radius: 15px;
+    background: var(--bg-card); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center; color: var(--accent);
+  }
+  .step .icon svg { width: 26px; height: 26px; }
+  .step .num { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 18px; }
+  .step h3 { font-size: 20px; margin: 4px 0 8px; }
+  .step p { color: var(--muted); font-size: 14.5px; max-width: 320px; margin: 0 auto; }
+
+  /* ---------- SERVICES ---------- */
+  .svc { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 70px; }
+  .svc:last-child { margin-bottom: 0; }
+  .svc.flip .svc-text { order: 2; }
+  .svc h3 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 14px; }
+  .svc p { color: var(--muted); font-size: 16px; max-width: 460px; }
+  .svc .btn { margin-top: 24px; }
+  .svc-visual {
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 22px; min-height: 230px; position: relative; overflow: hidden;
+  }
+  .svc-visual::after {
+    content: ""; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(77,141,255,0.20), transparent 70%); pointer-events: none;
+  }
+  .mini-head { font-size: 12px; color: #8fb4ff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .mini-head .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--demo); }
+  /* ad preview */
+  .ad-card { background: #121214; border: 1px solid var(--line-soft); border-radius: 12px; overflow: hidden; }
+  .ad-img { height: 92px; background: linear-gradient(135deg, #2a2118, #3a2a1c); display: flex; align-items: center; justify-content: center; color: #b88a5a; font-size: 12px; }
+  .ad-body { padding: 12px 14px; }
+  .ad-body .t { font-size: 13.5px; font-weight: 600; }
+  .ad-body .s { font-size: 12px; color: var(--muted-2); margin-top: 3px; }
+  .ad-btn { margin-top: 11px; background: var(--demo); color: #fff; font-size: 12px; font-weight: 600; text-align: center; padding: 8px; border-radius: 8px; }
+  /* sms thread */
+  .bubble { max-width: 80%; padding: 10px 13px; border-radius: 14px; font-size: 13px; margin-bottom: 9px; line-height: 1.45; }
+  .bubble.in { background: #1a1a1d; border: 1px solid var(--line-soft); border-bottom-left-radius: 4px; }
+  .bubble.out { background: var(--demo); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+  .stamp { font-size: 10.5px; color: var(--muted-2); display: block; margin-top: 2px; }
+  /* booking form */
+  .form-mock { display: grid; gap: 10px; }
+  .form-mock .fld { background: #121214; border: 1px solid var(--line-soft); border-radius: 9px; padding: 11px 13px; font-size: 12.5px; color: var(--muted-2); }
+  .form-mock .fld.filled { color: #fff; }
+  .form-mock .submit { background: var(--demo); color: #fff; text-align: center; font-size: 13px; font-weight: 600; padding: 11px; border-radius: 9px; }
+
+  /* ---------- COMPARISON ---------- */
+  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 920px; margin: 0 auto; }
+  .cmp-col { border-radius: var(--radius); padding: 30px 28px; border: 1px solid var(--line); }
+  .cmp-col.bad { background: linear-gradient(160deg, rgba(255,69,51,0.16), rgba(255,69,51,0.03)); border-color: rgba(255,69,51,0.35); }
+  .cmp-col.good { background: linear-gradient(160deg, rgba(47,191,113,0.18), rgba(47,191,113,0.03)); border-color: rgba(47,191,113,0.4); }
+  .cmp-col h3 { font-size: 20px; margin-bottom: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  .cmp-col.bad h3 { color: #fff; }
+  .cmp-item { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--line-soft); font-size: 14.5px; }
+  .cmp-item:first-of-type { border-top: none; }
+  .cmp-item .ci { width: 20px; height: 20px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .cmp-item.bad .ci { background: var(--accent); color: #fff; }
+  .cmp-item.good .ci { background: #2fbf71; color: #04140b; }
+  .cmp-item.bad { color: #d8c5c2; }
+  .cmp-item .ci svg { width: 12px; height: 12px; }
+
+  /* ---------- FAQ ---------- */
+  .faq { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+  .faq details { background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 19px 22px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    font-size: 16px; font-weight: 500;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .pm { flex: none; width: 22px; height: 22px; position: relative; transition: transform .25s ease; color: var(--muted); }
+  .faq summary .pm::before, .faq summary .pm::after { content: ""; position: absolute; background: currentColor; border-radius: 2px; }
+  .faq summary .pm::before { left: 0; right: 0; top: 50%; height: 2px; transform: translateY(-50%); }
+  .faq summary .pm::after { top: 0; bottom: 0; left: 50%; width: 2px; transform: translateX(-50%); transition: opacity .25s ease; }
+  .faq details[open] summary .pm::after { opacity: 0; }
+  .faq .ans { padding: 0 22px 20px; color: var(--muted); font-size: 14.5px; max-width: 640px; }
+
+  /* ---------- FINAL CTA ---------- */
+  .final { padding-bottom: 60px; }
+  .final-card {
+    position: relative; max-width: 920px; margin: 0 auto; text-align: center;
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 26px;
+    padding: 64px 30px 72px; overflow: hidden;
+  }
+  .final-card h2 { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+  .final-card .lead { position: relative; z-index: 1; }
+  .final-card .btn { position: relative; z-index: 1; margin-top: 30px; }
+  .final-rainbow {
+    position: absolute; left: 50%; bottom: -120px; transform: translateX(-50%);
+    width: 560px; height: 220px; border-radius: 50%; z-index: 0; filter: blur(46px); opacity: 0.85;
+    background: linear-gradient(90deg, #6a3bff, #ff4533 40%, #ffb347 60%, #57c7ff);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer { border-top: 1px solid var(--line); padding: 46px 0 40px; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .foot .tag { color: var(--muted-2); font-size: 14px; margin-top: 8px; }
+  .foot .soc { display: flex; gap: 12px; }
+  .foot .soc a { width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--muted); }
+  .foot .soc a:hover { color: #fff; border-color: #333; }
+  .copy { color: var(--muted-2); font-size: 13px; margin-top: 26px; }
+
+  /* ---------- ANIMATION ---------- */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px) {
+    section { padding: 70px 0; }
+    .nav-links { display: none; }
+    .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+    .svc { grid-template-columns: 1fr; gap: 26px; margin-bottom: 54px; }
+    .svc.flip .svc-text { order: 0; }
+    .cmp { grid-template-columns: 1fr; }
+    .foot { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <nav class="nav-inner">
+    <div class="brand">RESHAPPR<span class="spark">.</span></div>
+    <div class="nav-links">
+      <a href="#process">Process</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#" class="btn">Book a call</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="nav-spacer"></div>
+  <div class="wrap">
+    <h1 class="h-xl">More booked jobs.<br>Less <span class="em">chasing</span>.</h1>
+    <p class="lead">We run paid ads and automated follow-up so remodelers stop depending on referrals and Angi. You run estimates. We handle the pipeline.</p>
+    <div class="hero-cta">
+      <a href="#" class="btn btn-lg">Get Your Free Strategy Call</a>
+      <a href="#process" class="btn btn-lg btn-ghost">See how it works</a>
+    </div>
+
+    <!-- mock -->
+    <div class="mock-wrap reveal">
+      <div class="mock-glow"></div>
+      <div class="mock">
+        <div class="mock-bar">
+          <span class="d"></span><span class="d"></span><span class="d"></span>
+          <span class="title">Reshappr Pipeline · New Leads</span>
+        </div>
+        <div class="mock-body">
+          <div class="lead-row">
+            <div class="ava" style="background:#3b5bdb">JM</div>
+            <div class="meta"><div class="nm">Jenna Morrow</div><div class="pj">Full kitchen remodel · Naperville</div></div>
+            <span class="tag booked">Booked</span>
+          </div>
+          <div class="lead-row">
+            <div class="ava" style="background:#9c36b5">DR</div>
+            <div class="meta"><div class="nm">David Reyes</div><div class="pj">Master bath · Aurora</div></div>
+            <span class="tag replied">Replied</span>
+          </div>
+          <div class="lead-row">
+            <div class="ava" style="background:#c2410c">SK</div>
+            <div class="meta"><div class="nm">Susan Kohl</div><div class="pj">Kitchen + island · Wheaton</div></div>
+            <span class="tag new">New lead</span>
+          </div>
+        </div>
+      </div>
+      <div class="toast">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <div><div class="tt">Estimate booked</div><div class="ts">Auto follow-up · 2 min ago</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PLATFORMS -->
+<section class="platforms">
+  <div class="wrap">
+    <p>We run your marketing where homeowners actually spend their time.</p>
+    <div class="logo-row reveal">
+      <div class="logo-chip">
+        <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+        Facebook
+      </div>
+      <div class="logo-chip">
+        <svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".5" stop-color="#FA7E1E"/><stop offset="1" stop-color="#D62976"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig)"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.3" fill="#fff"/></svg>
+        Instagram
+      </div>
+      <div class="logo-chip">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.5 5.5 0 0 1-2.4 3.6v3h3.86c2.26-2.08 3.57-5.15 3.57-8.84Z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.29a12 12 0 0 0 0 10.76l3.98-3.09Z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75Z"/></svg>
+        Google
+      </div>
+      <div class="logo-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#36D37A" stroke-width="2.2" stroke-linecap="round"><path d="M4 18V9m5 9V5m5 13v-7m5 7V8"/></svg>
+        GoHighLevel
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap center section-head reveal">
+    <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>How It Works</span>
+    <h2 class="h-lg">From setup to <span class="em">booked</span> jobs in four steps.</h2>
+    <p class="lead">No retainers for activity reports. We build the system that fills your calendar, then keep it sharp.</p>
+  </div>
+  <div class="wrap">
+    <div class="grid-2 reveal">
+      <div class="step">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.5 14.5 18 12a8 8 0 1 0-6 6l2.5-2.5"/><path d="m21 21-3.5-3.5"/></svg></div>
+        <span class="num">01</span>
+        <h3>Strategy Call</h3>
+        <p>We learn your market, your best jobs, and what a good lead looks like for you.</p>
+      </div>
+      <div class="step">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m14 7 3 3"/><path d="M5 19l4-1 9.5-9.5a2.1 2.1 0 0 0-3-3L6 15l-1 4Z"/></svg></div>
+        <span class="num">02</span>
+        <h3>Build the Campaign</h3>
+        <p>We write the ads, build the landing page, and wire up automated follow-up before anything goes live.</p>
+      </div>
+      <div class="step">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.9.7-2.2-.1-3a2.2 2.2 0 0 0-2.9 0Z"/><path d="M12 15 9 12c.5-3 2.5-7 8.5-8.5C18 8.5 14.5 11 12 11.5"/><path d="M9 12H4s.5-3 2-4 5-1 5-1"/><path d="M12 15v5s3-.5 4-2 1-5 1-5"/></svg></div>
+        <span class="num">03</span>
+        <h3>Launch</h3>
+        <p>Ads go live within 7 to 10 business days. Leads land in your pipeline and get followed up with automatically.</p>
+      </div>
+      <div class="step">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 5-6"/></svg></div>
+        <span class="num">04</span>
+        <h3>Dial It In</h3>
+        <p>The first 30 days tell us what is working. We optimize from there and keep you in the loop weekly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap center section-head reveal">
+    <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>What We Do</span>
+    <h2 class="h-lg">Everything a remodeler needs to <span class="em">fill</span> the schedule.</h2>
+  </div>
+  <div class="wrap">
+
+    <div class="svc reveal">
+      <div class="svc-text">
+        <h3>Targeted <span class="em">Paid</span> Ads</h3>
+        <p>Facebook, Instagram, and Google ads aimed at homeowners in your service area who are actively looking to remodel. Your budget, your market, no shared leads.</p>
+        <a href="#" class="btn">Get Your Free Strategy Call</a>
+      </div>
+      <div class="svc-visual">
+        <div class="mini-head"><span class="pulse"></span>Live ad preview</div>
+        <div class="ad-card">
+          <div class="ad-img">Kitchen remodel · before / after</div>
+          <div class="ad-body">
+            <div class="t">Dreaming of a new kitchen?</div>
+            <div class="s">Free in-home estimate for Naperville homeowners.</div>
+            <div class="ad-btn">Book my estimate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc flip reveal">
+      <div class="svc-text">
+        <h3>Same-Day <span class="em">Automated</span> Follow-Up</h3>
+        <p>Every lead gets a text and an email the moment they fill out the form. It runs fully automated through GoHighLevel, so no lead sits cold while you are on a job site.</p>
+        <a href="#" class="btn">Get Your Free Strategy Call</a>
+      </div>
+      <div class="svc-visual">
+        <div class="mini-head"><span class="pulse"></span>Auto follow-up · sent in seconds</div>
+        <div class="bubble out">Hi Susan, thanks for reaching out about your kitchen remodel. When works for a quick call this week? <span class="stamp">Reshappr · just now</span></div>
+        <div class="bubble in">Tomorrow afternoon? <span class="stamp">Susan · 1 min later</span></div>
+        <div class="bubble out">Perfect. Booked you for 2pm Thursday. <span class="stamp">Reshappr</span></div>
+      </div>
+    </div>
+
+    <div class="svc reveal">
+      <div class="svc-text">
+        <h3>Your <span class="em">Booking</span> Page</h3>
+        <p>We build a dedicated landing page for your campaigns. It converts better than your homepage and tracks every lead that comes through.</p>
+        <a href="#" class="btn">Get Your Free Strategy Call</a>
+      </div>
+      <div class="svc-visual">
+        <div class="mini-head"><span class="pulse"></span>Estimate request</div>
+        <div class="form-mock">
+          <div class="fld filled">Susan Kohl</div>
+          <div class="fld filled">(630) 555-0142</div>
+          <div class="fld">Project details…</div>
+          <div class="submit">Book my free estimate</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="why">
+  <div class="wrap center section-head reveal">
+    <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m4 7 4 4 4-7 4 10 4-5"/></svg></span>Why Reshappr</span>
+    <h2 class="h-lg">There is a <span class="em">cheaper</span> way to get leads. This isn't it.</h2>
+  </div>
+  <div class="wrap">
+    <div class="cmp reveal">
+      <div class="cmp-col bad">
+        <h3>Doing it yourself</h3>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Referrals are inconsistent and dry up when you are busiest</div>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Angi sells the same lead to four or five other contractors</div>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>HomeAdvisor charges you whether the lead picks up or not</div>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Running your own ads eats weekends you do not have</div>
+      </div>
+      <div class="cmp-col good">
+        <h3>With Reshappr</h3>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Leads come only to you, never shared with competitors</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Follow-up runs automatically so nothing falls through</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>One point of contact who actually knows your campaign</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>We keep our client list short so your market stays yours</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Changes get made that week, not next quarter</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap center section-head reveal">
+    <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M9.1 9a3 3 0 1 1 4.5 2.6c-.9.5-1.6 1.2-1.6 2.4"/><path d="M12 17h.01"/></svg></span>FAQ</span>
+    <h2 class="h-lg">Straight answers to <span class="em">fair</span> questions.</h2>
+  </div>
+  <div class="wrap">
+    <div class="faq reveal">
+      <details>
+        <summary>Do you guarantee results?<span class="pm"></span></summary>
+        <div class="ans">No. Any agency that does is lying. What we can tell you is how we run campaigns, what we optimize for, and what realistic timelines look like. Results depend on your market, your price point, and how fast you respond to leads.</div>
+      </details>
+      <details>
+        <summary>How long until I see leads?<span class="pm"></span></summary>
+        <div class="ans">Ads go live in 7 to 10 business days after we finish setup. Plan for about 30 days before the data is solid enough to know what is working. Leads can come in before that, but that is when we start optimizing with confidence.</div>
+      </details>
+      <details>
+        <summary>I ran ads before and got garbage leads. Why would this be different?<span class="pm"></span></summary>
+        <div class="ans">Bad leads are usually a follow-up problem, not an ad problem. If someone fills out a form and does not hear back for six hours, they have already called someone else. We build automated same-day follow-up into every campaign from day one.</div>
+      </details>
+      <details>
+        <summary>You're a new agency. Why should I trust you?<span class="pm"></span></summary>
+        <div class="ans">Fair question. We do not have a client wall or a long track record to show you. What we do have: the founder runs your campaigns directly, we keep a short client list so your market stays ours to protect, and when something needs to change we do it that week. You will not get handed off to a junior account manager.</div>
+      </details>
+      <details>
+        <summary>How much time does this take on my end?<span class="pm"></span></summary>
+        <div class="ans">You handle estimates and the actual work. We handle ads, follow-up, and reporting. Expect a short onboarding call at the start and a quick weekly check-in once things are live.</div>
+      </details>
+      <details>
+        <summary>Why not just stay on Angi or HomeAdvisor?<span class="pm"></span></summary>
+        <div class="ans">Those platforms sell the same lead to multiple contractors at once, so you compete on price from the first call. Our leads go only to you in your market. That is a very different conversation with a homeowner.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <div class="final-rainbow"></div>
+      <h2 class="h-lg">We work with one remodeler per <span class="em">market.</span></h2>
+      <p class="lead">When your area is taken, it is taken. If you are seeing this, yours is still open. Get a free strategy call and we will show you exactly what a campaign looks like for your market.</p>
+      <a href="#" class="btn btn-lg">Claim Your Market</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand">RESHAPPR<span class="spark">.</span></div>
+        <div class="tag">Your market. Your leads. Never shared.</div>
+      </div>
+      <div class="soc">
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1.3-3 3.2V11H8v3h3v7h3v-7h2.5l.5-3H14V9.5c0-.3.2-.5.6-.5Z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8A1.5 1.5 0 1 0 6.5 5a1.5 1.5 0 0 0 0 3ZM5 10h3v9H5v-9Zm5 0h2.8v1.3c.5-.8 1.5-1.5 3-1.5 2.4 0 3.2 1.4 3.2 3.9V19h-3v-4.6c0-1.2-.4-1.9-1.4-1.9-1 0-1.6.7-1.6 1.9V19h-3v-9Z"/></svg></a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Reshappr. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // scroll reveal
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+
+  // single-open FAQ
+  (function () {
+    var items = document.querySelectorAll('.faq details');
+    items.forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        if (d.open) { items.forEach(function (o) { if (o !== d) o.open = false; }); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
