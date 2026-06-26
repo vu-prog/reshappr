@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64">
+  <svg x="0" y="0" width="64" height="64" viewBox="0 0 64 64" fill="none">
+    <rect x="12" y="12" width="40" height="40" rx="12" fill="none" stroke="#0c0c0d" stroke-width="4" opacity="0.4"/>
+    <path d="M24 40 L40 24 M31 24 H40 V33" stroke="#0c0c0d" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <text x="74" y="43" font-family="Satoshi, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="33" letter-spacing="2" fill="#0c0c0d">RESHAPPR</text>
+</svg>
