@@ -18,8 +18,8 @@
   <div class="nav-links">
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
-    <a href="index.html#faq">FAQ</a>
     <a href="contact.html">Contact</a>
+    <a href="index.html#faq">FAQ</a>
   </div>
   <a href="#book" class="btn">Book a call</a>
 </nav></div>
@@ -59,47 +59,28 @@
 
       <!-- right: opt-in form -->
       <div>
-        <div class="fillin">
-          <span class="lbl">FILL IN</span>
-          <span>Connect this form to your GoHighLevel form or webhook so submissions reach your CRM and trigger the automated follow-up. As built, it captures consent correctly but does not send anywhere yet.</span>
+        <div class="form-embed">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/wSv5vptTQdQVfdgmVgLz"
+            style="width:100%;min-height:600px;border:none;display:block;"
+            id="inline-wSv5vptTQdQVfdgmVgLz"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Website Opt-In Form"
+            data-height="undefined"
+            data-layout-iframe-id="inline-wSv5vptTQdQVfdgmVgLz"
+            data-form-id="wSv5vptTQdQVfdgmVgLz"
+            title="Website Opt-In Form">
+          </iframe>
         </div>
-
-        <form class="optin" action="#" method="post" onsubmit="event.preventDefault(); this.querySelector('.form-msg').style.display='block';">
-          <div class="field">
-            <label class="flbl" for="name">Name</label>
-            <input id="name" type="text" name="name" placeholder="Your name" required />
-          </div>
-          <div class="field">
-            <label class="flbl" for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="you@email.com" required />
-          </div>
-          <div class="field">
-            <label class="flbl" for="phone">Phone (optional)</label>
-            <input id="phone" type="tel" name="phone" placeholder="(555) 555-5555" />
-          </div>
-          <div class="field">
-            <label class="flbl" for="details">What do you want to grow?</label>
-            <textarea id="details" name="details" placeholder="e.g. more kitchen remodel estimates in the Naperville area"></textarea>
-          </div>
-
-          <!-- Two separate consent checkboxes, unchecked + optional -->
-          <label class="consent">
-            <input type="checkbox" name="marketing_consent" value="yes" />
-            <span>I agree to receive <strong>marketing</strong> text messages from Reshappr (offers and updates) at the number provided. Consent is not a condition of purchase. Message frequency varies. Message &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span>
-          </label>
-          <label class="consent">
-            <input type="checkbox" name="transactional_consent" value="yes" />
-            <span>I agree to receive <strong>account and service</strong> text messages from Reshappr (strategy call confirmations and reminders) at the number provided. Message &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span>
-          </label>
-
-          <p class="disclosure">
-            By submitting this form you agree to Reshappr's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms &amp; Conditions</a>. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help at any time. Your mobile information will not be shared with third parties for marketing purposes.
-          </p>
-
-          <button class="btn btn-lg" type="submit">Request my free strategy call</button>
-          <p class="form-msg" style="display:none; text-align:center; color:#5fe39a; font-size:13.5px; margin-top:12px">Thanks. Once this form is connected to your CRM, submissions will arrive here.</p>
-          <p class="form-foot">We reply same day. <a href="privacy-policy.html">Privacy</a> &middot; <a href="terms-and-conditions.html">Terms</a></p>
-        </form>
+        <p class="disclosure" style="text-align:left">
+          By submitting this form you agree to Reshappr's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms &amp; Conditions</a>. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help at any time. Your mobile information will not be shared with third parties for marketing purposes.
+        </p>
       </div>
     </div>
   </div>
@@ -122,9 +103,10 @@
     <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
     <a href="contact.html">Contact</a>
   </div>
-  <div class="copy">Reshappr, a DBA of Vuper LLC &middot; 3741 Prosperity Avenue, Fairfax, VA 22031 &middot; <a href="tel:+15717318500">+1 (571) 731-8500</a> &middot; <a href="mailto:vu@reshappr.com">vu@reshappr.com</a></div>
+  <div class="copy">Reshappr LLC &middot; 3741 Prosperity Avenue, Fairfax, VA 22031 &middot; <a href="tel:+15717318500">+1 (571) 731-8500</a> &middot; <a href="mailto:vu@reshappr.com">vu@reshappr.com</a></div>
   <div class="copy">&copy; 2026 Reshappr. All rights reserved.</div>
 </div></footer>
 
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
