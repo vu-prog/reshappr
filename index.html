@@ -56,6 +56,7 @@
     display: flex; justify-content: center; pointer-events: none;
   }
   .nav-inner {
+    position: relative;
     pointer-events: auto;
     display: flex; align-items: center; gap: 28px;
     background: rgba(12,12,13,0.82);
@@ -81,7 +82,8 @@
   .btn-lg { padding: 15px 28px; font-size: 15px; }
   .btn-ghost { background: transparent; border: 1px solid var(--line); box-shadow: none; color: #fff; }
   .btn-ghost:hover { border-color: #333; background: rgba(255,255,255,0.03); }
-  .nav-toggle { display: none; }
+  .nav-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 4px; width: 38px; height: 38px; background: none; border: none; cursor: pointer; padding: 0; flex: none; }
+  .nav-toggle span { width: 20px; height: 2px; background: #fff; border-radius: 2px; display: block; }
 
   /* ---------- SECTION SHELL ---------- */
   section { position: relative; padding: 96px 0; }
@@ -193,6 +195,11 @@
   /* ad preview */
   .ad-card { background: #121214; border: 1px solid var(--line-soft); border-radius: 12px; overflow: hidden; }
   .ad-img { height: 92px; background: linear-gradient(135deg, #2a2118, #3a2a1c); display: flex; align-items: center; justify-content: center; color: #b88a5a; font-size: 12px; }
+  .ad-ba { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; height: 128px; }
+  .ba-half { position: relative; margin: 0; overflow: hidden; }
+  .ba-half img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ba-tag { position: absolute; bottom: 6px; left: 6px; font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; background: rgba(0,0,0,0.6); color: #fff; padding: 3px 7px; border-radius: 5px; }
+  .ba-tag.after { background: var(--demo); }
   .ad-body { padding: 12px 14px; }
   .ad-body .t { font-size: 13.5px; font-weight: 600; }
   .ad-body .s { font-size: 12px; color: var(--muted-2); margin-top: 3px; }
@@ -277,7 +284,12 @@
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 860px) {
     section { padding: 70px 0; }
-    .nav-links { display: none; }
+    .nav-inner { gap: 12px; padding: 9px 9px 9px 18px; }
+    .nav-toggle { display: flex; }
+    .nav-links { display: none; position: absolute; top: calc(100% + 12px); left: 0; right: 0; flex-direction: column; gap: 4px; background: rgba(12,12,13,0.98); backdrop-filter: blur(16px); border: 1px solid var(--line); border-radius: 18px; padding: 12px; box-shadow: 0 16px 40px -16px rgba(0,0,0,0.85); }
+    .nav-inner.open .nav-links { display: flex; }
+    .nav-links a { padding: 11px 14px; border-radius: 10px; font-size: 15px; color: #fff; }
+    .nav-links a:hover { background: rgba(255,255,255,0.05); }
     .grid-2 { grid-template-columns: 1fr; gap: 40px; }
     .svc { grid-template-columns: 1fr; gap: 26px; margin-bottom: 54px; }
     .svc.flip .svc-text { order: 0; }
@@ -299,6 +311,7 @@
       <a href="#faq">FAQ</a>
     </div>
     <a href="contact.html" class="btn">Book a call</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
 </div>
 
@@ -429,7 +442,10 @@
       <div class="svc-visual">
         <div class="mini-head"><span class="pulse"></span>Live ad preview</div>
         <div class="ad-card">
-          <div class="ad-img">Kitchen remodel · before / after</div>
+          <div class="ad-ba">
+            <figure class="ba-half"><img src="brand/kitchen-before.jpg" alt="Kitchen before remodel" loading="lazy" /><span class="ba-tag">Before</span></figure>
+            <figure class="ba-half"><img src="brand/kitchen-after.jpg" alt="Kitchen after remodel" loading="lazy" /><span class="ba-tag after">After</span></figure>
+          </div>
           <div class="ad-body">
             <div class="t">Dreaming of a new kitchen?</div>
             <div class="s">Free in-home estimate for Naperville homeowners.</div>
@@ -593,6 +609,15 @@
         if (d.open) { items.forEach(function (o) { if (o !== d) o.open = false; }); }
       });
     });
+  })();
+
+  // mobile nav toggle
+  (function () {
+    var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav-inner');
+    if (t && n) {
+      t.addEventListener('click', function () { var o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+      n.querySelectorAll('.nav-links a').forEach(function (a) { a.addEventListener('click', function () { n.classList.remove('open'); }); });
+    }
   })();
 </script>
 </body>

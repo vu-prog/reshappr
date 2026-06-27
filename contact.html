@@ -22,20 +22,20 @@
     <a href="index.html#faq">FAQ</a>
   </div>
   <a href="#book" class="btn">Book a call</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav></div>
 
 <main>
   <div class="nav-spacer"></div>
   <div class="wrap">
     <div class="page-head">
-      <span class="badge"><span class="dot"></span>Contact</span>
       <h1>Let's see if your market is <span class="em">open</span>.</h1>
       <p class="lead">Fill out the form and we will reach out to set up your free strategy call. Prefer to talk now? Call or email us directly.</p>
     </div>
 
     <div class="grid-2 section" id="book" style="align-items:start">
       <!-- left: direct contact -->
-      <div>
+      <div class="info-col">
         <h2 style="font-size:24px; margin-bottom:20px">Reach us directly</h2>
         <div class="info-list">
           <div class="info-row">
@@ -58,7 +58,7 @@
       </div>
 
       <!-- right: opt-in form -->
-      <div>
+      <div class="form-col">
         <div class="form-embed">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/wSv5vptTQdQVfdgmVgLz"
@@ -107,6 +107,15 @@
   <div class="copy">&copy; 2026 Reshappr. All rights reserved.</div>
 </div></footer>
 
+<script>
+  (function(){
+    var t=document.querySelector('.nav-toggle'), n=document.querySelector('.nav-inner');
+    if(t&&n){
+      t.addEventListener('click',function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); });
+      n.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click',function(){ n.classList.remove('open'); }); });
+    }
+  })();
+</script>
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>

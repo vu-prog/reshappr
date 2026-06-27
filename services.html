@@ -22,6 +22,7 @@
     <a href="index.html#faq">FAQ</a>
   </div>
   <a href="contact.html" class="btn">Book a call</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav></div>
 
 <main>
@@ -92,5 +93,14 @@
   <div class="copy">&copy; 2026 Reshappr. All rights reserved.</div>
 </div></footer>
 
+<script>
+  (function(){
+    var t=document.querySelector('.nav-toggle'), n=document.querySelector('.nav-inner');
+    if(t&&n){
+      t.addEventListener('click',function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); });
+      n.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click',function(){ n.classList.remove('open'); }); });
+    }
+  })();
+</script>
 </body>
 </html>
