@@ -1,4 +1,4 @@
-/* Reshappr shared styles — About / Services / Contact */
+/* Reshappr shared styles: About / Mentorship / Contact */
 :root {
   --bg:#000; --bg-card:#0c0c0d; --bg-card-2:#111113; --line:#1d1d20; --line-soft:#161618;
   --text:#fff; --muted:#9a9aa2; --muted-2:#6b6b73; --accent:#ff4533; --demo:#4d8dff;
@@ -39,7 +39,7 @@ main { padding:30px 0 40px; }
 h1 { font-weight:500; letter-spacing:-0.02em; line-height:1.05; font-size:clamp(36px,5.5vw,60px); }
 h2 { font-weight:500; letter-spacing:-0.02em; line-height:1.1; font-size:clamp(26px,3.4vw,38px); }
 h3 { font-weight:600; letter-spacing:-0.01em; font-size:21px; }
-.lead { color:var(--muted); font-size:clamp(16px,1.6vw,19px); max-width:600px; margin:20px auto 0; }
+.lead { color:var(--muted); font-size:clamp(16px,1.6vw,19px); max-width:640px; margin:20px auto 0; }
 .section { padding:50px 0; }
 
 /* cards / grids */
@@ -50,8 +50,16 @@ h3 { font-weight:600; letter-spacing:-0.01em; font-size:21px; }
 .card p { color:var(--muted); font-size:15px; }
 .card .ic { width:50px; height:50px; border-radius:13px; background:var(--bg-card-2); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--accent); margin-bottom:16px; }
 .card .ic svg { width:24px; height:24px; }
+.card .n { font-family:var(--serif); font-style:italic; color:var(--accent); font-size:24px; line-height:1; }
 .prose p { color:#c9c9cf; margin:0 0 16px; font-size:16px; }
 .prose p:last-child { margin-bottom:0; }
+
+/* module / inclusion list */
+.list-plain { display:grid; gap:10px; margin-top:8px; }
+.list-plain .row { display:flex; gap:12px; align-items:flex-start; background:var(--bg-card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-size:15px; color:#d2d2d8; }
+.list-plain .row .tick { width:20px; height:20px; border-radius:50%; background:rgba(47,191,113,0.16); color:#2fbf71; display:flex; align-items:center; justify-content:center; flex:none; margin-top:1px; }
+.list-plain .row .tick svg { width:12px; height:12px; }
+.list-plain .row strong { color:#fff; font-weight:600; }
 
 /* contact info rows */
 .info-list { display:grid; gap:14px; margin-top:8px; }
@@ -61,12 +69,7 @@ h3 { font-weight:600; letter-spacing:-0.01em; font-size:21px; }
 .info-row a { color:#fff; }
 .info-row a:hover { color:var(--accent); }
 
-/* FILL-IN placeholders (white boxes to replace) */
-.fillin { background:#fff; color:#0c0c0d; border:2px dashed var(--accent); border-radius:12px; padding:15px 16px; font-size:14px; font-weight:600; margin:16px 0; display:flex; gap:11px; align-items:flex-start; line-height:1.5; }
-.fillin .lbl { background:var(--accent); color:#fff; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:6px; letter-spacing:.05em; flex:none; margin-top:1px; }
-.fillin-img { background:#fff; color:#0c0c0d; border:2px dashed var(--accent); border-radius:16px; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; text-align:center; padding:24px; font-weight:700; }
-.fillin-img .lbl { background:var(--accent); color:#fff; font-size:11px; font-weight:800; padding:4px 10px; border-radius:6px; letter-spacing:.05em; margin-bottom:6px; }
-.fillin-img small { font-weight:500; color:#555; max-width:280px; }
+/* owner photo */
 .owner-photo { width:100%; max-width:440px; border-radius:16px; border:1px solid var(--line); display:block; margin:0 auto; }
 .owner-caption { text-align:center; max-width:440px; margin:14px auto 0; }
 .owner-name { display:block; font-weight:700; font-size:16px; color:#fff; }
@@ -87,7 +90,7 @@ h3 { font-weight:600; letter-spacing:-0.01em; font-size:21px; }
 .optin .btn { width:100%; }
 .form-foot { text-align:center; margin-top:14px; font-size:13px; color:var(--muted-2); }
 .form-foot a { color:var(--muted); text-decoration:underline; }
-.form-embed { background:#16161A; border:1px solid #2A2A2E; border-radius:16px; overflow:hidden; }
+.form-embed { background:#16161A; border:1px solid #2A2A2E; border-radius:16px; overflow:hidden; min-height:600px; }
 .form-embed iframe { width:100%; min-height:600px; border:none; display:block; }
 
 /* footer */

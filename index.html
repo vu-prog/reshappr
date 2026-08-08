@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Reshappr | Done-For-You Marketing for Kitchen &amp; Bath Remodelers</title>
+<title>Reshappr | Online Courses and Coaching for Barbers</title>
 <link rel="icon" href="brand/favicon.svg" type="image/svg+xml" />
-<meta name="description" content="Reshappr runs paid ads and automated follow-up for kitchen and bath remodelers so your calendar fills with real estimates, not tire-kickers. Leads go only to you." />
+<meta name="description" content="Reshappr builds online courses and digital products for barbers, plus a done-with-you mentorship that turns the content you already post into booked clients at the price you set." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
@@ -112,8 +112,8 @@
     filter: blur(20px);
   }
   .hero .wrap { position: relative; z-index: 1; }
-  .hero h1 { margin: 0 auto; max-width: 880px; }
-  .hero .lead { max-width: 560px; }
+  .hero h1 { margin: 0 auto; max-width: 900px; }
+  .hero .lead { max-width: 610px; }
   .hero-cta { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
   /* hero mock */
@@ -132,15 +132,15 @@
   .mock-bar .d { width: 11px; height: 11px; border-radius: 50%; background: #2a2a2e; }
   .mock-bar .title { margin-left: 10px; font-size: 12.5px; color: var(--muted-2); }
   .mock-body { padding: 16px; display: grid; gap: 10px; }
-  .lead-row { display: flex; align-items: center; gap: 13px; background: #121214; border: 1px solid var(--line-soft); border-radius: 12px; padding: 12px 14px; }
-  .ava { width: 38px; height: 38px; border-radius: 10px; flex: none; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: #fff; }
-  .lead-row .meta { flex: 1; min-width: 0; }
-  .lead-row .nm { font-size: 14.5px; font-weight: 600; }
-  .lead-row .pj { font-size: 12.5px; color: var(--muted-2); }
-  .tag { font-size: 11.5px; font-weight: 600; padding: 5px 10px; border-radius: 100px; white-space: nowrap; }
-  .tag.booked { background: rgba(54,211,122,0.13); color: #5fe39a; }
-  .tag.new { background: rgba(255,69,51,0.14); color: #ff7a6d; }
-  .tag.replied { background: rgba(96,165,250,0.14); color: #7fb4ff; }
+  .stat-row { display: flex; align-items: center; gap: 13px; background: #121214; border: 1px solid var(--line-soft); border-radius: 12px; padding: 12px 14px; }
+  .stat-row .ava { width: 38px; height: 38px; border-radius: 10px; flex: none; display: flex; align-items: center; justify-content: center; color: var(--accent); background: rgba(255,69,51,0.12); }
+  .stat-row .ava svg { width: 19px; height: 19px; }
+  .stat-row .meta { flex: 1; min-width: 0; }
+  .stat-row .nm { font-size: 14.5px; font-weight: 600; }
+  .stat-row .pj { font-size: 12.5px; color: var(--muted-2); }
+  .figure { font-size: 15px; font-weight: 700; white-space: nowrap; letter-spacing: -0.01em; }
+  .figure.hot { color: #ff7a6d; }
+  .figure.cool { color: #7fb4ff; }
   .toast {
     position: absolute; right: 16px; bottom: -18px; z-index: 3;
     display: flex; align-items: center; gap: 10px;
@@ -173,14 +173,14 @@
   .step .icon svg { width: 26px; height: 26px; }
   .step .num { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 18px; }
   .step h3 { font-size: 20px; margin: 4px 0 8px; }
-  .step p { color: var(--muted); font-size: 14.5px; max-width: 320px; margin: 0 auto; }
+  .step p { color: var(--muted); font-size: 14.5px; max-width: 330px; margin: 0 auto; }
 
-  /* ---------- SERVICES ---------- */
+  /* ---------- WHAT YOU GET ---------- */
   .svc { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 70px; }
   .svc:last-child { margin-bottom: 0; }
   .svc.flip .svc-text { order: 2; }
   .svc h3 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 14px; }
-  .svc p { color: var(--muted); font-size: 16px; max-width: 460px; }
+  .svc p { color: var(--muted); font-size: 16px; max-width: 470px; }
   .svc .btn { margin-top: 24px; }
   .svc-visual {
     background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px;
@@ -192,28 +192,34 @@
   }
   .mini-head { font-size: 12px; color: #8fb4ff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
   .mini-head .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--demo); }
-  /* ad preview */
-  .ad-card { background: #121214; border: 1px solid var(--line-soft); border-radius: 12px; overflow: hidden; }
-  .ad-img { height: 92px; background: linear-gradient(135deg, #2a2118, #3a2a1c); display: flex; align-items: center; justify-content: center; color: #b88a5a; font-size: 12px; }
-  .ad-ba { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; height: 128px; }
-  .ba-half { position: relative; margin: 0; overflow: hidden; }
-  .ba-half img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .ba-tag { position: absolute; bottom: 6px; left: 6px; font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; background: rgba(0,0,0,0.6); color: #fff; padding: 3px 7px; border-radius: 5px; }
-  .ba-tag.after { background: var(--demo); }
-  .ad-body { padding: 12px 14px; }
-  .ad-body .t { font-size: 13.5px; font-weight: 600; }
-  .ad-body .s { font-size: 12px; color: var(--muted-2); margin-top: 3px; }
-  .ad-btn { margin-top: 11px; background: var(--demo); color: #fff; font-size: 12px; font-weight: 600; text-align: center; padding: 8px; border-radius: 8px; }
-  /* sms thread */
-  .bubble { max-width: 80%; padding: 10px 13px; border-radius: 14px; font-size: 13px; margin-bottom: 9px; line-height: 1.45; }
+  /* module list */
+  .mod-list { display: grid; gap: 7px; position: relative; z-index: 1; }
+  .mod {
+    display: flex; align-items: center; gap: 11px;
+    background: #121214; border: 1px solid var(--line-soft); border-radius: 10px;
+    padding: 10px 13px; font-size: 13px; color: #d2d2d8;
+  }
+  .mod .tick { width: 17px; height: 17px; border-radius: 50%; background: rgba(54,211,122,0.15); color: #5fe39a; display: flex; align-items: center; justify-content: center; flex: none; }
+  .mod .tick svg { width: 10px; height: 10px; }
+  .mod .n { font-family: var(--serif); font-style: italic; color: var(--muted-2); font-size: 13px; flex: none; }
+  .mod-more { font-size: 12px; color: var(--muted-2); padding: 4px 2px 0; }
+  /* schedule */
+  .sched { display: grid; gap: 7px; position: relative; z-index: 1; }
+  .day {
+    display: flex; align-items: center; gap: 12px;
+    background: #121214; border: 1px solid var(--line-soft); border-radius: 10px; padding: 10px 13px;
+  }
+  .day .dl { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; color: var(--muted-2); width: 34px; flex: none; }
+  .day .dt { font-size: 13px; color: #d2d2d8; flex: 1; }
+  .day .dtime { font-size: 11.5px; color: var(--muted-2); white-space: nowrap; }
+  .day.hi { border-color: rgba(255,69,51,0.4); background: rgba(255,69,51,0.07); }
+  .day.hi .dt { color: #fff; }
+  /* message thread */
+  .bubble { max-width: 84%; padding: 10px 13px; border-radius: 14px; font-size: 13px; margin-bottom: 9px; line-height: 1.45; position: relative; z-index: 1; }
   .bubble.in { background: #1a1a1d; border: 1px solid var(--line-soft); border-bottom-left-radius: 4px; }
   .bubble.out { background: var(--demo); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
   .stamp { font-size: 10.5px; color: var(--muted-2); display: block; margin-top: 2px; }
-  /* booking form */
-  .form-mock { display: grid; gap: 10px; }
-  .form-mock .fld { background: #121214; border: 1px solid var(--line-soft); border-radius: 9px; padding: 11px 13px; font-size: 12.5px; color: var(--muted-2); }
-  .form-mock .fld.filled { color: #fff; }
-  .form-mock .submit { background: var(--demo); color: #fff; text-align: center; font-size: 13px; font-weight: 600; padding: 11px; border-radius: 9px; }
+  .bubble.out .stamp { color: rgba(255,255,255,0.72); }
 
   /* ---------- COMPARISON ---------- */
   .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 920px; margin: 0 auto; }
@@ -253,8 +259,8 @@
     background: var(--bg-card); border: 1px solid var(--line); border-radius: 26px;
     padding: 64px 30px 72px; overflow: hidden;
   }
-  .final-card h2 { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
-  .final-card .lead { position: relative; z-index: 1; }
+  .final-card h2 { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+  .final-card .lead { position: relative; z-index: 1; max-width: 620px; }
   .final-card .btn { position: relative; z-index: 1; margin-top: 30px; }
   .final-rainbow {
     position: absolute; left: 50%; bottom: -120px; transform: translateX(-50%);
@@ -305,7 +311,7 @@
   <nav class="nav-inner">
     <div class="brand"><svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect x="12" y="12" width="40" height="40" rx="12" fill="none" stroke="currentColor" stroke-width="4" opacity="0.4"/><path d="M24 40 L40 24 M31 24 H40 V33" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>RESHAPPR</div>
     <div class="nav-links">
-      <a href="services.html">Services</a>
+      <a href="services.html">Mentorship</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="#faq">FAQ</a>
@@ -320,10 +326,10 @@
   <div class="hero-glow"></div>
   <div class="nav-spacer"></div>
   <div class="wrap">
-    <h1 class="h-xl">More booked jobs.<br>Less <span class="em">chasing</span>.</h1>
-    <p class="lead">We run paid ads and automated follow-up so remodelers stop depending on referrals and Angi. You run estimates. We handle the pipeline.</p>
+    <h1 class="h-xl">Turn the videos you already post into a <span class="em">booked</span> chair.</h1>
+    <p class="lead">Reshappr is a done-with-you mentorship for barbers who post every day and still have holes in the week. You learn why the videos that work actually work, then build the profile and the consultation that turn a viewer into a client at the price you set.</p>
     <div class="hero-cta">
-      <a href="contact.html" class="btn btn-lg">Get Your Free Strategy Call</a>
+      <a href="contact.html" class="btn btn-lg">Book a call</a>
       <a href="#process" class="btn btn-lg btn-ghost">See how it works</a>
     </div>
 
@@ -333,23 +339,23 @@
       <div class="mock">
         <div class="mock-bar">
           <span class="d"></span><span class="d"></span><span class="d"></span>
-          <span class="title">Reshappr Pipeline · New Leads</span>
+          <span class="title">@_vuper &middot; the account this is built on</span>
         </div>
         <div class="mock-body">
-          <div class="lead-row">
-            <div class="ava" style="background:#3b5bdb">JM</div>
-            <div class="meta"><div class="nm">Jenna Morrow</div><div class="pj">Full kitchen remodel · Naperville</div></div>
-            <span class="tag booked">Booked</span>
+          <div class="stat-row">
+            <div class="ava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+            <div class="meta"><div class="nm">Instagram following</div><div class="pj">Built while cutting, not after quitting</div></div>
+            <span class="figure">87.2K</span>
           </div>
-          <div class="lead-row">
-            <div class="ava" style="background:#9c36b5">DR</div>
-            <div class="meta"><div class="nm">David Reyes</div><div class="pj">Master bath · Aurora</div></div>
-            <span class="tag replied">Replied</span>
+          <div class="stat-row">
+            <div class="ava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="meta"><div class="nm">Pinned reel</div><div class="pj">One video, one message, no trend</div></div>
+            <span class="figure hot">58.9M views</span>
           </div>
-          <div class="lead-row">
-            <div class="ava" style="background:#c2410c">SK</div>
-            <div class="meta"><div class="nm">Susan Kohl</div><div class="pj">Kitchen + island · Wheaton</div></div>
-            <span class="tag new">New lead</span>
+          <div class="stat-row">
+            <div class="ava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="meta"><div class="nm">Pinned reel</div><div class="pj">Same framework, different story</div></div>
+            <span class="figure cool">52.8M views</span>
           </div>
         </div>
       </div>
@@ -357,7 +363,7 @@
         <span class="ic">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
         </span>
-        <div><div class="tt">Estimate booked</div><div class="ts">Auto follow-up · 2 min ago</div></div>
+        <div><div class="tt">$18K months, cut from a house</div><div class="ts">No shop, no suite, no ad spend</div></div>
       </div>
     </div>
   </div>
@@ -366,23 +372,23 @@
 <!-- PLATFORMS -->
 <section class="platforms">
   <div class="wrap">
-    <p>We run your marketing where homeowners actually spend their time.</p>
+    <p>The system runs on the four platforms your clients already scroll.</p>
     <div class="logo-row reveal">
-      <div class="logo-chip">
-        <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
-        Facebook
-      </div>
       <div class="logo-chip">
         <svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".5" stop-color="#FA7E1E"/><stop offset="1" stop-color="#D62976"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig)"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.3" fill="#fff"/></svg>
         Instagram
       </div>
       <div class="logo-chip">
-        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.5 5.5 0 0 1-2.4 3.6v3h3.86c2.26-2.08 3.57-5.15 3.57-8.84Z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.29a12 12 0 0 0 0 10.76l3.98-3.09Z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75Z"/></svg>
-        Google
+        <svg viewBox="0 0 24 24" fill="none"><path d="M14.2 2h2.9c.2 1.6 1.1 3 2.4 3.8.8.5 1.7.8 2.6.9v2.9a8.6 8.6 0 0 1-5-1.6v6.6a6.3 6.3 0 1 1-6.3-6.3c.3 0 .6 0 .9.1v3a3.4 3.4 0 1 0 2.5 3.2V2Z" fill="#fff"/><path d="M13.2 1h2.9c.2 1.6 1.1 3 2.4 3.8-.9.6-1.6 1.5-1.9 2.6a6.5 6.5 0 0 1-1.4-1.1v6.6a6.3 6.3 0 1 1-6.3-6.3v3a3.4 3.4 0 1 0 2.5 3.2V1Z" fill="#25F4EE" opacity=".55"/></svg>
+        TikTok
       </div>
       <div class="logo-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#36D37A" stroke-width="2.2" stroke-linecap="round"><path d="M4 18V9m5 9V5m5 13v-7m5 7V8"/></svg>
-        GoHighLevel
+        <svg viewBox="0 0 24 24" fill="none"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="#FF0000"/><path d="M10 8.7 15 12l-5 3.3V8.7Z" fill="#fff"/></svg>
+        YouTube
+      </div>
+      <div class="logo-chip">
+        <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+        Facebook
       </div>
     </div>
   </div>
@@ -392,97 +398,97 @@
 <section id="process">
   <div class="wrap center section-head reveal">
     <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>How It Works</span>
-    <h2 class="h-lg">From setup to <span class="em">booked</span> jobs in four steps.</h2>
-    <p class="lead">No retainers for activity reports. We build the system that fills your calendar, then keep it sharp.</p>
+    <h2 class="h-lg">From your first call to a <span class="em">full</span> week.</h2>
+    <p class="lead">You run these with a coach on the phone every weekday, not alone with a video library and good intentions.</p>
   </div>
   <div class="wrap">
     <div class="grid-2 reveal">
       <div class="step">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.5 14.5 18 12a8 8 0 1 0-6 6l2.5-2.5"/><path d="m21 21-3.5-3.5"/></svg></div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
         <span class="num">01</span>
-        <h3>Strategy Call</h3>
-        <p>We learn your market, your best jobs, and what a good lead looks like for you.</p>
+        <h3>Onboarding Call</h3>
+        <p>We go through your account, your city, and what you charge right now. That call sets your start date.</p>
       </div>
       <div class="step">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m14 7 3 3"/><path d="M5 19l4-1 9.5-9.5a2.1 2.1 0 0 0-3-3L6 15l-1 4Z"/></svg></div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></div>
         <span class="num">02</span>
-        <h3>Build the Campaign</h3>
-        <p>We write the ads, build the landing page, and wire up automated follow-up before anything goes live.</p>
+        <h3>Profile and Booking Funnel</h3>
+        <p>Bio, Facebook page, booking link. Someone who lands on your page books in two taps instead of sending a DM you answer at midnight.</p>
       </div>
       <div class="step">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.9.7-2.2-.1-3a2.2 2.2 0 0 0-2.9 0Z"/><path d="M12 15 9 12c.5-3 2.5-7 8.5-8.5C18 8.5 14.5 11 12 11.5"/><path d="M9 12H4s.5-3 2-4 5-1 5-1"/><path d="M12 15v5s3-.5 4-2 1-5 1-5"/></svg></div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 10.5V7a3 3 0 0 0-6 0v3.5"/><rect x="4" y="10.5" width="16" height="10.5" rx="3"/><path d="M12 15v2"/></svg></div>
         <span class="num">03</span>
-        <h3>Launch</h3>
-        <p>Ads go live within 7 to 10 business days. Leads land in your pipeline and get followed up with automatically.</p>
+        <h3>Post Every Day</h3>
+        <p>Before and after showcases first, because your work sells before you have to talk. The content frameworks come once posting stops being a decision.</p>
       </div>
       <div class="step">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 5-6"/></svg></div>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 12.5h5"/></svg></div>
         <span class="num">04</span>
-        <h3>Dial It In</h3>
-        <p>The first 30 days tell us what is working. We optimize from there and keep you in the loop weekly.</p>
+        <h3>Consultation and Price</h3>
+        <p>The question sequence you run in the chair. It is how barbers stop apologizing for charging more than $30.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- WHAT YOU GET -->
+<section id="inside">
   <div class="wrap center section-head reveal">
-    <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>What We Do</span>
-    <h2 class="h-lg">Everything a remodeler needs to <span class="em">fill</span> the schedule.</h2>
+    <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>What You Get</span>
+    <h2 class="h-lg">Courses, digital products, and a coach who <span class="em">picks</span> up.</h2>
+    <p class="lead">Reshappr builds online courses and digital products for barbers who want to scale. The library lives in the portal, and the mentorship is how you get it along with the coaching around it.</p>
   </div>
   <div class="wrap">
 
     <div class="svc reveal">
       <div class="svc-text">
-        <h3>Targeted <span class="em">Paid</span> Ads</h3>
-        <p>Facebook, Instagram, and Google ads aimed at homeowners in your service area who are actively looking to remodel. Your budget, your market, no shared leads.</p>
-        <a href="contact.html" class="btn">Get Your Free Strategy Call</a>
+        <h3>The <span class="em">Portal</span></h3>
+        <p>Every module, framework, and template sits in one place. Profile setup across all four platforms, the content frameworks, the editing walkthrough, the consultation script. You work through it at your own pace between calls and keep coming back to it.</p>
+        <a href="services.html" class="btn">See what is inside</a>
       </div>
       <div class="svc-visual">
-        <div class="mini-head"><span class="pulse"></span>Live ad preview</div>
-        <div class="ad-card">
-          <div class="ad-ba">
-            <figure class="ba-half"><img src="brand/kitchen-before.jpg" alt="Kitchen before remodel" loading="lazy" /><span class="ba-tag">Before</span></figure>
-            <figure class="ba-half"><img src="brand/kitchen-after.jpg" alt="Kitchen after remodel" loading="lazy" /><span class="ba-tag after">After</span></figure>
-          </div>
-          <div class="ad-body">
-            <div class="t">Dreaming of a new kitchen?</div>
-            <div class="s">Free in-home estimate for Naperville homeowners.</div>
-            <div class="ad-btn">Book my estimate</div>
-          </div>
+        <div class="mini-head"><span class="pulse"></span>Inside the portal</div>
+        <div class="mod-list">
+          <div class="mod"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></span><span class="n">01</span>Mindset and the first 30 days</div>
+          <div class="mod"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></span><span class="n">02</span>Profile setup and booking funnel</div>
+          <div class="mod"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></span><span class="n">03</span>Posting strategy</div>
+          <div class="mod"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></span><span class="n">04</span>The 4-part content framework</div>
+          <div class="mod"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></span><span class="n">05</span>Before and after showcase</div>
+          <div class="mod"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></span><span class="n">06</span>Editing, start to finish</div>
         </div>
+        <div class="mod-more">Plus the consultation masterclass and the modules still being added.</div>
       </div>
     </div>
 
     <div class="svc flip reveal">
       <div class="svc-text">
-        <h3>Same-Day <span class="em">Automated</span> Follow-Up</h3>
-        <p>Every lead gets a text and an email the moment they fill out the form. It runs fully automated through GoHighLevel, so no lead sits cold while you are on a job site.</p>
-        <a href="contact.html" class="btn">Get Your Free Strategy Call</a>
+        <h3>A call every <span class="em">weekday</span></h3>
+        <p>Group coaching Monday through Friday, plus a one on one every week on your account, your city, and your numbers. Bring the video you are scared to post and we go through it live instead of you guessing for another week.</p>
+        <a href="contact.html" class="btn">Book a call</a>
       </div>
       <div class="svc-visual">
-        <div class="mini-head"><span class="pulse"></span>Auto follow-up · sent in seconds</div>
-        <div class="bubble out">Hi Susan, thanks for reaching out about your kitchen remodel. When works for a quick call this week? <span class="stamp">Reshappr · just now</span></div>
-        <div class="bubble in">Tomorrow afternoon? <span class="stamp">Susan · 1 min later</span></div>
-        <div class="bubble out">Perfect. Booked you for 2pm Thursday. <span class="stamp">Reshappr</span></div>
+        <div class="mini-head"><span class="pulse"></span>A normal week</div>
+        <div class="sched">
+          <div class="day"><span class="dl">MON</span><span class="dt">Group coaching call</span><span class="dtime">7:00 PM EST</span></div>
+          <div class="day"><span class="dl">TUE</span><span class="dt">Group coaching call</span><span class="dtime">7:00 PM EST</span></div>
+          <div class="day hi"><span class="dl">WED</span><span class="dt">Group call, then your 1 on 1</span><span class="dtime">7:00 PM EST</span></div>
+          <div class="day"><span class="dl">THU</span><span class="dt">Group coaching call</span><span class="dtime">7:00 PM EST</span></div>
+          <div class="day"><span class="dl">FRI</span><span class="dt">Group coaching call</span><span class="dtime">7:00 PM EST</span></div>
+        </div>
       </div>
     </div>
 
     <div class="svc reveal">
       <div class="svc-text">
-        <h3>Your <span class="em">Booking</span> Page</h3>
-        <p>We build a dedicated landing page for your campaigns. It converts better than your homepage and tracks every lead that comes through.</p>
-        <a href="contact.html" class="btn">Get Your Free Strategy Call</a>
+        <h3>Access between the <span class="em">calls</span></h3>
+        <p>Questions do not hold until the next session. You message and get an answer, which matters most in the first month when every post feels wrong and nobody around you can tell you whether it is working.</p>
+        <a href="contact.html" class="btn">Book a call</a>
       </div>
       <div class="svc-visual">
-        <div class="mini-head"><span class="pulse"></span>Estimate request</div>
-        <div class="form-mock">
-          <div class="fld filled">Susan Kohl</div>
-          <div class="fld filled">(630) 555-0142</div>
-          <div class="fld">Project details…</div>
-          <div class="submit">Book my free estimate</div>
-        </div>
+        <div class="mini-head"><span class="pulse"></span>Example of a between-call question</div>
+        <div class="bubble in">Client asked why I went up to $55. Froze and gave him the old price. <span class="stamp">2:14 PM</span></div>
+        <div class="bubble out">You answered the price. Answer the reason instead, then let him decide. Run the second question from the consultation doc next time and send me how it goes. <span class="stamp">2:21 PM</span></div>
+        <div class="bubble in">Ran it on the next guy. He booked at $55. <span class="stamp">Thursday</span></div>
       </div>
     </div>
 
@@ -493,24 +499,25 @@
 <section id="why">
   <div class="wrap center section-head reveal">
     <span class="badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m4 7 4 4 4-7 4 10 4-5"/></svg></span>Why Reshappr</span>
-    <h2 class="h-lg">There is a <span class="em">cheaper</span> way to get leads. This isn't it.</h2>
+    <h2 class="h-lg">Most barber coaching stops right where the <span class="em">real</span> work starts.</h2>
   </div>
   <div class="wrap">
     <div class="cmp reveal">
       <div class="cmp-col bad">
-        <h3>Doing it yourself</h3>
-        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Referrals are inconsistent and dry up when you are busiest</div>
-        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Angi sells the same lead to four or five other contractors</div>
-        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>HomeAdvisor charges you whether the lead picks up or not</div>
-        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Running your own ads eats weekends you do not have</div>
+        <h3>The advice you have already paid for</h3>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Use the geotag, post before and afters, problem then solution, and that is where it ends</div>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>You copy a format that worked for someone else with no idea what made it work</div>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Fifty thousand views and a week that still has holes in it</div>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>A group call where you get five minutes, ask your question, and leave without understanding the answer</div>
+        <div class="cmp-item bad"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Still charging $30 because of what somebody said the last time you tried to raise it</div>
       </div>
       <div class="cmp-col good">
-        <h3>With Reshappr</h3>
-        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Leads come only to you, never shared with competitors</div>
-        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Follow-up runs automatically so nothing falls through</div>
-        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>One point of contact who actually knows your campaign</div>
-        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>We keep our client list short so your market stays yours</div>
-        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Changes get made that week, not next quarter</div>
+        <h3>Inside the mentorship</h3>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>You learn why a format works, so you can build your own instead of chasing someone else's</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Your profile turns a viewer into a booking without them having to message you first</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Someone on the call every weekday, so a bad week gets caught in a day</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>A weekly one on one that looks at your account, not a generic example</div>
+        <div class="cmp-item good"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>A consultation you run in the chair that holds the price you set</div>
       </div>
     </div>
   </div>
@@ -525,28 +532,32 @@
   <div class="wrap">
     <div class="faq reveal">
       <details>
-        <summary>Do you guarantee results?<span class="pm"></span></summary>
-        <div class="ans">No. Any agency that does is lying. What we can tell you is how we run campaigns, what we optimize for, and what realistic timelines look like. Results depend on your market, your price point, and how fast you respond to leads.</div>
+        <summary>Do I need a shop or a suite first?<span class="pm"></span></summary>
+        <div class="ans">No. Vu built his book to $18K months cutting out of a house, and the mentorship is written for barbers doing the same thing. Where you cut matters far less than whether somebody who finds you online can actually book you.</div>
       </details>
       <details>
-        <summary>How long until I see leads?<span class="pm"></span></summary>
-        <div class="ans">Ads go live in 7 to 10 business days after we finish setup. Plan for about 30 days before the data is solid enough to know what is working. Leads can come in before that, but that is when we start optimizing with confidence.</div>
+        <summary>Do I have to go viral for this to work?<span class="pm"></span></summary>
+        <div class="ans">No, and chasing that is usually what keeps barbers stuck. There are barbers sitting at fifty thousand views with a half empty week, which tells you reach was never the thing in the way. The message underneath the video is what turns a viewer into somebody sitting in your chair.</div>
       </details>
       <details>
-        <summary>I ran ads before and got garbage leads. Why would this be different?<span class="pm"></span></summary>
-        <div class="ans">Bad leads are usually a follow-up problem, not an ad problem. If someone fills out a form and does not hear back for six hours, they have already called someone else. We build automated same-day follow-up into every campaign from day one.</div>
+        <summary>I bought a barber course before and it barely scratched the surface. Why is this different?<span class="pm"></span></summary>
+        <div class="ans">Most of them hand you the visible layer of a video and stop there. You get the reasoning underneath, which is the part that transfers to your city and your work, plus a coach on the phone every weekday while you apply it. Nobody grades your homework in a course.</div>
       </details>
       <details>
-        <summary>You're a new agency. Why should I trust you?<span class="pm"></span></summary>
-        <div class="ans">Fair question. We do not have a client wall or a long track record to show you. What we do have: the founder runs your campaigns directly, we keep a short client list so your market stays ours to protect, and when something needs to change we do it that week. You will not get handed off to a junior account manager.</div>
+        <summary>Do you teach cutting technique?<span class="pm"></span></summary>
+        <div class="ans">No. This is the business built around the haircut: your profile, your content, your consultation, and what you charge. Bring your own hands.</div>
       </details>
       <details>
-        <summary>How much time does this take on my end?<span class="pm"></span></summary>
-        <div class="ans">You handle estimates and the actual work. We handle ads, follow-up, and reporting. Expect a short onboarding call at the start and a quick weekly check-in once things are live.</div>
+        <summary>How much time does this take?<span class="pm"></span></summary>
+        <div class="ans">Posting daily and showing up to the calls. If you cannot commit to posting every day for the length of the program, wait until you can, because the daily reps are the whole thing.</div>
       </details>
       <details>
-        <summary>Why not just stay on Angi or HomeAdvisor?<span class="pm"></span></summary>
-        <div class="ans">Those platforms sell the same lead to multiple contractors at once, so you compete on price from the first call. Our leads go only to you in your market. That is a very different conversation with a homeowner.</div>
+        <summary>How long is the program?<span class="pm"></span></summary>
+        <div class="ans">120 days, and it starts on the date we set during your onboarding call rather than the day you sign up.</div>
+      </details>
+      <details>
+        <summary>Do you guarantee I will make a certain number?<span class="pm"></span></summary>
+        <div class="ans">No, and anyone handing you a number is guessing at your city, your skill, and how much you will actually do. What is on the table is the system Vu ran himself and a coach working it with you five days a week.</div>
       </details>
     </div>
   </div>
@@ -557,9 +568,9 @@
   <div class="wrap">
     <div class="final-card reveal">
       <div class="final-rainbow"></div>
-      <h2 class="h-lg">We work with one remodeler per <span class="em">market.</span></h2>
-      <p class="lead">When your area is taken, it is taken. If you are seeing this, yours is still open. Get a free strategy call and we will show you exactly what a campaign looks like for your market.</p>
-      <a href="contact.html" class="btn btn-lg">Claim Your Market</a>
+      <h2 class="h-lg">The roster stays <span class="em">small</span> on purpose.</h2>
+      <p class="lead">A call every weekday and a one on one every week only works at a certain headcount. If you cut from a house, post already, and still have holes in your week, book a call and we will go through your account together.</p>
+      <a href="contact.html" class="btn btn-lg">Book a call</a>
     </div>
   </div>
 </section>
@@ -570,15 +581,15 @@
     <div class="foot">
       <div>
         <div class="brand"><svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect x="12" y="12" width="40" height="40" rx="12" fill="none" stroke="currentColor" stroke-width="4" opacity="0.4"/><path d="M24 40 L40 24 M31 24 H40 V33" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>RESHAPPR</div>
-        <div class="tag">Your market. Your leads. Never shared.</div>
+        <div class="tag">Online courses and digital products for barbers who want a full book.</div>
       </div>
       <div class="soc">
-        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1.3-3 3.2V11H8v3h3v7h3v-7h2.5l.5-3H14V9.5c0-.3.2-.5.6-.5Z"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8A1.5 1.5 0 1 0 6.5 5a1.5 1.5 0 0 0 0 3ZM5 10h3v9H5v-9Zm5 0h2.8v1.3c.5-.8 1.5-1.5 3-1.5 2.4 0 3.2 1.4 3.2 3.9V19h-3v-4.6c0-1.2-.4-1.9-1.4-1.9-1 0-1.6.7-1.6 1.9V19h-3v-9Z"/></svg></a>
+        <a href="https://www.instagram.com/_vuper/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </div>
     <div class="foot-links">
+      <a href="services.html">Mentorship</a>
+      <a href="about.html">About</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
       <a href="mailto:vu@reshappr.com">Contact</a>
