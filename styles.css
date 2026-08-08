@@ -92,6 +92,10 @@ h3 { font-weight:600; letter-spacing:-0.01em; font-size:21px; }
 .form-foot a { color:var(--muted); text-decoration:underline; }
 .form-embed { background:#16161A; border:1px solid #2A2A2E; border-radius:16px; overflow:hidden; min-height:600px; }
 .form-embed iframe { width:100%; min-height:600px; border:none; display:block; }
+/* booking calendar: GHL's form_embed.js sets an inline height once loaded, which wins
+   over these. min-height only holds the box open before that lands. */
+.cal-embed { background:#16161A; border:1px solid #2A2A2E; border-radius:16px; overflow:hidden; min-height:700px; }
+.cal-embed iframe { width:100%; min-height:700px; border:none; display:block; }
 
 /* footer */
 footer { border-top:1px solid var(--line); padding:46px 0 40px; margin-top:60px; }
